@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple web design & use combinator</title>
+    <style>
+   
+   /* Style for the main container to create a grid layout */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Space between the containers */
+  margin: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style each individual container */
+.container {
+  border: 2px solid #333;
+
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  margin: 10px;
+  margin-left: 10px;
+}
+ h3{
+    
+    text-align: center;
+    height:  100px;
+    width: 200px;
+    padding-top: 20px;
+    margin:  20px;
+    border-radius: 10px;
+    border: 2px solid;
+ }
+ 
+span{
+    height: 400px;
+    width: 400px;
+}
+ 
+div ~ p {
+    background-color: aqua;
+    border: 2px double red;
+    text-align: center;
+    height:  100px;
+    width: 250px;
+  margin: 10px;
+} 
+h1,h3{
+
+    background-color: aqua;
+    border: 2px double red;
+    text-align: center;
+    height:  100px;
+    width: 250px;
+}  
+h4 ,h2{
+    text-align: center;
+    font-size: larger;
+    border: 2px solid;
+   background-color: blanchedalmond;
+    height:  30px;
+   
+}
+a{
+    letter-spacing:  2px;
+    align-items: last baseline;
+    grid-template-columns: minmax(6);
+    grid-row: 2px;
+    gap: 5px;
+}
+
+    </style> 
+   
+</head>
+<body>
+   <div>
+  <!-- Header Section -->
+  <header>
+    <h3>13nov 2024 1st Assignment</h3>
+    <nav>
+      <ul>
+        <a href="/index.html/Home" target="_blank" > Home</a> 
+        <br><br>
+         <a href="/index.html/About" target="_blank">About</a>
+         <br><br>
+       <a href="/index.html/Contact" target="_blank">Contact</a>
+        </ul>
+    </nav>
+   
+    <span>
+        <h4>welcome to my website</h4>
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1X-AN3kFs-XAzQU5uTMgBv7IXiWaT-L7zeQ&s " alt="demo pic"
+       height="500px"
+       width="500px">
+    </span>
+    <div classz="container">
+        
+           <h1> Home Minimalism</h1>
+           <p>
+          Minimalist design is about stripping away excess and focusing on essentials.
+
+          It promotes simplicity, clarity, and efficiency in both form and function.
+        </P>
+    </div>
+  
+        
+        <h1> About Minimalism</h1>
+        <p>
+         Minimalist design is about stripping away excess and focusing on essentials.
+
+        It promotes simplicity, clarity, and efficiency in both form and function.
+     </P>
+   
+     <a href="https://www.google.com/" target="_blank">Google</a><br><br>
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-fgLoF4rAJj900Upo_HkSqB-gCFeO-vfk2A&s">
+     <br><br>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEX/////ADP/ACX/ABP/9fb/maL/AC7/ACL/ADH/AB7/ACz/ACn/PlX/ACf/ABv/pLL/u8b/5er/2N//+vv/rrn/tL//UGv/8vX/6u7/4OL/aX//HEL/w8z/NVT/lKL/XHP/K07/0Nj/hpf/eIT/yc//UmX/ADj/RGD/I0j/bX3/CT7/cIT/OVr/gJH/WHD/vMH/eIz/oK//jJz/oqpyET5IAAAE6ElEQVR4nO2c7XaiPBRGESwQKCpgBb8VP0pb7dSZ+7+3N9a61tupzpqaJxKZZ/+1tGsXk5NzkhzLIoQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYT8gVTSbDazJEnmHUn7nbtzHD7e/+BcPpHJJ/e/oGqJT6RZHvfnnd2uKBaLXm88K10/chynJRES7x37HIeP9z+4f0A+F/puORv3eotFUezanXk/zrOKjLNk2d4OVvfDdShdpEMUhkHgur6kcTnyadd1gyAMI6kvvcP18H412LaXSXZFu7g7KP1IeFEYuGpCf6cchJEnIr8cdONr6DW7G8cLXc1ip1Td0HM23aZuwe6w5V7Z7f+4rWFbq1/8WKnfu6N41Phd7URBxX57Aq+jS/DBufbgO43vdDUJCjMEpaJ40CE4t00RlIphghdMSxPG4JGgxK90tl7VVp8QP9GCsSGzzBG/lYMNX6KqnX7DLrCCuWvWK5QvcY1dv3VF1UZfEEuo4dSkifRA9IYUzIamfUnlAvUeadhvVe3zFT9AzqZts4LhgdYIaFiYFiv22BOgYc+8iabRCJ+Ahs/mTTRyqhnjBFOnaptT+CHOMDFwKpU4uMn0wbwVzR7gZGpksGg0PFwxw8hgIcPFHcxwGlYtc5LwBWa4USmShtoiTdCDGaqEw3Db0vUNcEuYoUqVzUnj15aeJREuIGaeiqFMxZdjLaVW30MZxqqGMt6sbZzZEd9DhfxEJRweDK1s6+C/qh6qLjxSWdI4x4JR3BPofStYqQZjKH8PejgK1LLtB8jQSu9c6HAUP0CGXcA4/CB7QQ5HmOFE5R/v/Fa4TR492HCE1TF+Ig1lLlaihiPM8EVl2fXV0EondgRxhBWF0YaWlQ8gCzlYcqFU0j9paFnzDeCrGg5Ahkq1xDOGcoZ+VlkMvgNLn/QYWmnRUswdTTeUC7mpUBqOMMN7lQD2J0PVvAq2/aTRUOZVjcuj7W0YWtmbE1z4Hm/E0LL6l+ZVN2Mo86rZRcPxhgz3edUFijDDmX5DmXOsv694U+9wV+k75DhUNaz7XFr7eFj3NY0h69L65xaaDJt1zw9NyvGVNrnP1WkQFX5Ynab+tTZ8vdQzrF5a/5o3eN8Ct40IMwTuPeUDI/eekPuH0NNVMEPYHvBlOdJ5YHvAS4jhxTnSebw5yLD+ZzHqf55G+UwU/BDGAdyZKGPPtbkwQ5WzicFNnE2s//nS+p8RVlp668P+BTOs/1n9+t+3qP+dmfrfe6r/3bV/4P6hkdeCoHdIjQwX0HvARt7lDpF3uY28jz+GNnB5NW+qwfZUUCso6gFWhjqQX7oRrQ1/De4yVPv+NFZuWo8hge4xZBVmjUR8nyjTen3NNHQ1TfQVXL6Nln5tltWpe889k/omahK0rJEZvS9tbb0v9/1L4ftH38UXm74+QUl7WKmjK9Y7rX6SZrt0vEB3g+SvyL8YeE65u0pL6OTX69C1hR0FV+oFHUTyr7nD17aWGHGGfD6avE1Xs6FvO+JzP29FIf/Yz9v2hHAifzhbTd8mozl8lfZ3pFnc748edpNiu3harWazZ99vKfRkF740mvVWT4ttMdl1Rv04rqon+2nSj776eZIko2/11V/KJ/KPvvpGKRFCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBiHP8BxnOABwwsuQEAAAAASUVORK5CYII=">
+    
+     
+     
+     <img src="data:image/png;base64,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">
+     <br><br>
+     <a href="https://youtub" target="_blank">youtub</a>
+     
+     <a href="https://faceBook.com/" target="_blank"> faceBook</a>
+    
+     <div class="container">
+        <div class="Contact">
+          <h2>combinator</h2>
+          <h4>Welcome  to combinator family</h4>
+          
+          <div class="main-container">
+            <div class="container">
+              <h2>Adjacent Sibling Combinator (+)</h2>
+              <p>The adjacent sibling combinator (+) selects the element that immediately follows another specified element within the same parent, 
+                with no other elements in between.</p>
+            
+            </div>
+            
+            
+            <div class="container">
+              <h2>Descendant Combinator ( )</h2>
+              <p>Definition: Selects an element that is a descendant of another element (not necessarily immediate).</p>
+            </div>
+            
+            <div class="container">
+              <h2>Child Combinator (>)</h2>
+              <p>Selects an element that is a direct child of another element.</p>
+            </div>
+            <div class="container">
+                <h2>General Sibling Combinator (~) </h2>
+
+         
+                <p>Definition: Selects all elements that are siblings of another element, appearing after it, within the same parent.</p>
+
+            </div>
+           
+          
+    
+</body>
+</html>
